@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexPick - Your Smart Flipkart Shopping Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 NexPick</h1>
+            <p class="subtitle">Your Smart Flipkart Shopping Assistant</p>
+        </header>
+
+        <div id="chatlogs">
+            <!-- Initial welcome message -->
+            <div class="bot-msg welcome-msg">
+                <div class="msg-header">
+                    <strong>NexPick</strong>
+                    <span class="timestamp">Just now</span>
+                </div>
+                <div class="msg-content">
+                    Hi there! I can help you find products on Flipkart. What are you looking for today?
+                </div>
+            </div>
+        </div>
+
+        <form id="chat-form">
+            <input type="text" id="user-input" name="user_input" 
+                   placeholder="Ask NexPick to recommend something..." 
+                   autocomplete="off" required
+                   aria-label="Chat input">
+            <button type="submit" aria-label="Send message">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("chat-form");
+        const input = document.getElementById("user-input");
+        const chatlogs = document.getElementById("chatlogs");
+        const button = form.querySelector("button");
+
+        // Load chat history if available
+        if (localStorage.getItem("chatHistory")) {
+            chatlogs.innerHTML = localStorage.getItem("chatHistory");
+            chatlogs.scrollTop = chatlogs.scrollHeight;
+        }
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const userInput = input.value.trim();
+            if (!userInput) return;
+
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            // Display user message
+            chatlogs.innerHTML += `
+                <div class="user-msg">
+                    <div class="msg-header">
+                        <strong>You</strong>
+                        <span class="timestamp">${timeString}</span>
+                    </div>
+                    <div class="msg-content">${userInput}</div>
+                </div>
+            `;
+            chatlogs.scrollTop = chatlogs.scrollHeight;
+
+            // Add typing indicator
+            chatlogs.innerHTML += `
+                <div class="bot-msg typing" id="typing">
+                    <div class="msg-header">
+                        <strong>NexPick</strong>
+                    </div>
+                    <div class="msg-content">Typing...</div>
+                </div>
+            `;
+            chatlogs.scrollTop = chatlogs.scrollHeight;
+
+            input.disabled = true;
+            button.disabled = true;
+
+            try {
+                const res = await fetch("/get", {
+                    method: "POST",
+                    body: new URLSearchParams({ msg: userInput }),
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                });
+
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+
+                const botResponse = await res.text();
+                document.getElementById("typing").remove();
+
+                chatlogs.innerHTML += `
+                    <div class="bot-msg">
+                        <div class="msg-header">
+                            <strong>NexPick</strong>
+                            <span class="timestamp">${timeString}</span>
+                        </div>
+                        <div class="msg-content">${botResponse}</div>
+                    </div>
+                `;
+
+                localStorage.setItem("chatHistory", chatlogs.innerHTML);
+                chatlogs.scrollTop = chatlogs.scrollHeight;
+                input.value = "";
+            } catch (error) {
+                document.getElementById("typing").remove();
+                chatlogs.innerHTML += `
+                    <div class="bot-msg error">
+                        <div class="msg-header">
+                            <strong>NexPick</strong>
+                        </div>
+                        <div class="msg-content">Sorry, I'm having trouble connecting. Please try again later.</div>
+                    </div>
+                `;
+                console.error("Error:", error);
+            } finally {
+                input.disabled = false;
+                button.disabled = false;
+                input.focus();
+            }
+        });
+    </script>
+</body>
+</html>

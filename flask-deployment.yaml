@@ -1,0 +1,44 @@
+# -------------------------------------------
+# 📦 Deployment for Flask App
+# -------------------------------------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nexpick-deployment 
+  labels:
+    app: nexpick
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nexpick
+  template:
+    metadata:
+      labels:
+        app: nexpick
+    spec:
+      containers:
+        - name: nexpick-container
+          image: flask-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - secretRef:
+                name: llmops-secrets
+---
+# -------------------------------------------
+# 🌐 Service for External Access
+# -------------------------------------------
+apiVersion: v1
+kind: Service
+metadata:
+  name: nexpick-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: nexpick
+  ports:
+    - protocol: TCP
+      port: 80        # Exposed to the outside world
+      targetPort: 5000  # Flask container port
