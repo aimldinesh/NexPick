@@ -115,16 +115,25 @@ E2 --> F1
 
 ---
 ## 🧪 Inputs & Functionality
+```bash
 sequenceDiagram
+    participant User
+    participant Frontend
+    participant Backend
+    participant RAG_Pipeline
+    participant AstraDB
+    participant LLM
+    
     User->>+Frontend: Enter query (e.g., "Best phone under ₹20k")
     Frontend->>+Backend: POST /query
-    Backend->>+RAG Pipeline: Process query
-    RAG Pipeline->>+AstraDB: Semantic search
-    AstraDB-->>-RAG Pipeline: Relevant products
-    RAG Pipeline->>+LLM: Generate response
+    Backend->>+RAG_Pipeline: Process query
+    RAG_Pipeline->>+AstraDB: Semantic search
+    AstraDB-->>-RAG_Pipeline: Relevant products
+    RAG_Pipeline->>+LLM: Generate response
     LLM-->>-Backend: Formatted answer
     Backend-->>-Frontend: Display results
-
+    Frontend-->>-User: Show recommendations
+```
 --- 
 
 ### 👤 User Input
