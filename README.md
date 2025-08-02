@@ -112,3 +112,62 @@ E2 --> F1
    - Source code hosted on **GitHub**.
    - All manifests and Dockerfiles version controlled.
    - Easily reproducible for future scaling or cloud migration.
+
+---
+## 🧪 Inputs & Functionality
+
+### 👤 User Input
+- **Natural Language Queries** related to Flipkart products:
+  - Example:  
+    - "Suggest a budget smartphone under ₹15,000"  
+    - "Which smartwatches are good for fitness tracking?"  
+    - "Tell me the best laptops for students"
+
+### 🧠 Backend Logic
+- Query is passed through the **LangChain RAG pipeline**.
+- Relevant product data is **semantically retrieved** from AstraDB using embeddings.
+- Context and query are passed to the **Groq-hosted Llama 3.1-8B model**.
+- Generated response includes:
+  - Product **name**, **price**, and **specs**
+  - Product **image**
+  - Hyperlink to original Flipkart page (optional enhancement)
+
+### 💬 Chatbot Functionality
+- Built with **Flask + HTML/CSS/JavaScript**
+- Offers a **real-time, dynamic** chat experience
+- Auto-scrolls to new responses and handles conversation context
+
+### 📊 Monitoring Features
+- Prometheus captures:
+  - Total queries
+  - Average response latency
+  - Error rates
+- Grafana dashboard displays real-time metrics for system observability
+
+---
+## 🛠️ Tech Stack
+
+### ⚙️ Core Components
+- **🧠 Groq API (LLaMA 3.1 - 8B)** — Fast LLM inference for generating product suggestions
+- **🦜 LangChain** — Manages the Retrieval-Augmented Generation (RAG) pipeline
+- **🌐 Flask** — Backend framework to handle API and chat requests
+- **🛍️ AstraDB (Vector Store)** — Stores product embeddings for semantic retrieval
+
+### 🧰 Frontend
+- **🖼️ HTML/CSS/JavaScript** — Custom-designed UI for the chatbot interface
+
+### 🐳 Containerization & Orchestration
+- **Docker** — Containerizes the application for consistent deployment
+- **Kubernetes (Minikube)** — Manages pods, services, and deployments
+
+### 📈 Monitoring
+- **Prometheus** — Scrapes and collects app metrics (latency, queries)
+- **Grafana** — Visualizes real-time application performance metrics
+
+### ☁️ Cloud Infrastructure
+- **Google Cloud Platform (GCP)** — Hosts the VM and Kubernetes cluster
+
+### 🔄 CI/CD and DevOps
+- **GitHub** — Version control and codebase management
+
+
