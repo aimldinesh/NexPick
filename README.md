@@ -116,6 +116,17 @@ E2 --> F1
 ---
 ## 🧪 Inputs & Functionality
 
+```sequenceDiagram
+    User->>+Frontend: Enter query (e.g., "Best phone under ₹15k")
+    Frontend->>+Backend: POST /query
+    Backend->>+RAG Pipeline: Process query
+    RAG Pipeline->>+AstraDB: Semantic search
+    AstraDB-->>-RAG Pipeline: Relevant products
+    RAG Pipeline->>+LLM: Generate response
+    LLM-->>-Backend: Formatted answer
+    Backend-->>-Frontend: Display results
+```
+
 ### 👤 User Input
 - **Natural Language Queries** related to Flipkart products:
   - Example:  
