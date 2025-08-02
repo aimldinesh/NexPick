@@ -250,3 +250,48 @@ docker build -t nexpick-app .
 docker run -p 5000:5000 nexpick-app
 ```
 ---
+
+## 📸 UI Preview
+
+Below are some screenshots of the **NexPick** product recommender chatbot in action:
+
+| 🖼️ Chatbot Screens | Description |
+|------------------|-------------|
+| ![App Running](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/0.app_running.PNG) | Flask app running successfully |
+| ![Chat Screen 1](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_1.PNG) | Welcome message and product inquiry |
+| ![Chat Screen 2](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_2.PNG) | LLM recommends product using RAG |
+| ![Chat Screen 3](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_3.PNG) | Follow-up user queries |
+| ![Chat Screen 4](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_4.PNG) | Contextual recommendations |
+| ![Chat Screen 5](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_5.PNG) | User queries about product details |
+| ![Chat Screen 6](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_6.PNG) | Deep product reasoning |
+| ![Chat Screen 7](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_7.PNG) | Additional queries |
+| ![Chat Screen 8](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_8.PNG) | Ongoing chat with consistent memory |
+
+---
+
+## 📊 Monitoring Dashboard
+
+Real-time metrics visualized using **Prometheus** and **Grafana**:
+
+### 🔎 Prometheus
+| Screenshot | Description |
+|-----------|-------------|
+| ![Prometheus Running](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Prometheus/1.promethus_running.PNG) | Prometheus UI running |
+| ![Target Health](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Prometheus/2.prometheus_target_health_status.PNG) | Target health check of monitored services |
+
+### 📈 Grafana
+| Screenshot | Description |
+|-----------|-------------|
+| ![Grafana on GCP](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/0.Grafana_running_in_GCP_SHH_Browser.PNG) | Grafana running on GCP SSH Browser |
+| ![Grafana Home](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/1.Grafana_homepage.PNG) | Grafana Homepage |
+| ![Add Data Source 1](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/2.Grafana_add_data_sources_1.PNG) | Adding Prometheus as a data source |
+| ![Add Data Source 2](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/3.Grafana_add_data_sources_2.PNG) | Data source configured |
+| ![Requests Total 4](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/4.Grafana_http_requests_total_is_4.PNG) | `http_requests_total = 4` |
+| ![Requests Total 5](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/5.Grafana_http_requests_total_is_5.PNG) | `http_requests_total = 5` |
+| ![Requests Total 7](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/6..Grafana_http_requests_total_is_7.PNG) | `http_requests_total = 7` |
+| ![Response Size](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/7.Prometheus_http_response_size_bytes.PNG) | Response size metric visualization |
+| ![Scrape Samples](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/8.Grafana_scrape_samples.PNG) | Scrape samples over time |
+
+---
+
+These visuals demonstrate the full cycle of product recommendation and robust monitoring in action.
