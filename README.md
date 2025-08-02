@@ -254,6 +254,11 @@ ASTRA_DB_API_ENDPOINT = " "
 ASTRA_DB_APPLICATION_TOKEN = " "
 ASTRA_DB_KEY_SPACE = "default_keyspace"
 ```
+### 5. Run the App
+```bash
+python appp.py
+The app will be available at: http://127.0.0.1:5000
+```
 ---
 ## ✅ Optional: Docker Run
 ```bash
