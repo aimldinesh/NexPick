@@ -170,4 +170,111 @@ E2 --> F1
 ### 🔄 CI/CD and DevOps
 - **GitHub** — Version control and codebase management
 
+---
 
+## 📦 Folder Structure
+├── .env # Environment variables
+├── .gitignore # Git ignored files
+├── app.py # Flask application entry point
+├── Dockerfile # Container instructions
+├── flask-deployment.yaml # Kubernetes deployment file for Flask app
+├── requirements.txt # Python dependencies
+├── setup.py # Project setup script
+├── structure.txt # Folder structure reference
+
+├── data/
+│ └── flipkart_product_review.csv # Raw product review dataset
+
+├── grafana/
+│ └── grafana-deployment.yaml # Grafana deployment configuration
+
+├── prometheus/
+│ ├── prometheus-configmap.yaml # Prometheus scraping configuration
+│ └── prometheus-deployment.yaml # Prometheus deployment configuration
+
+├── rag_pipeline/
+│ ├── init.py
+│ ├── config.py # Configuration variables and constants
+│ ├── data_converter.py # Script to clean/convert raw data
+│ ├── data_ingestion.py # Load data into AstraDB vector store
+│ └── rag_chain.py # LangChain RAG pipeline using Groq LLM
+
+├── static/
+│ └── style.css # Frontend styles for chatbot UI
+
+├── templates/
+│ └── index.html # Chatbot frontend layout (HTML)
+
+├── utils/
+│ ├── init.py
+│ ├── custom_exception.py # Custom exception handler
+│ └── logger.py # Logging utility
+
+└── venv/ # Virtual environment (excluded in Git)
+
+---
+
+## 🚀 How to Run Locally
+Follow these steps to set up and run **NexPick** locally:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/aimldinesh/NexPick.git
+cd NexPick
+```
+### 2. Create and Activate Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+### 3. Install Dependencies
+```bash
+pip install -e .
+```
+### 4. Set Environment Variables
+Create a .env file in the root directory and add your secrets like:
+```bash
+GROQ_API_KEY = " " 
+HF_TOKEN = " "
+HUGGINGFACEHUB_API_TOKEN = " "
+ASTRA_DB_API_ENDPOINT = " "
+ASTRA_DB_APPLICATION_TOKEN = " "
+ASTRA_DB_KEY_SPACE = "default_keyspace"
+```
+---
+## ✅ Optional: Docker Run
+```bash
+docker build -t nexpick-app .
+docker run -p 5000:5000 nexpick-app
+```
+---
+
+## 🛠️ Tech Stack
+
+NexPick combines modern DevOps, MLOps, and GenAI tools to deliver an end-to-end product recommendation assistant:
+
+### 👨‍💻 Core Technologies
+- **Python** – Primary programming language
+- **Flask** – Lightweight backend for serving the chatbot
+- **HTML/CSS** – Frontend user interface
+- **LangChain** – Retrieval-Augmented Generation (RAG) pipeline for intelligent response generation
+- **AstraDB (VectorDB)** – Vector storage of product embeddings for semantic search
+- **Groq API (Llama-3)** – LLM for generating contextual responses
+
+### 📦 Data & Processing
+- **Flipkart Product Reviews Dataset** – Source data for product recommendations
+- **Custom Data Converter** – Cleans and formats raw CSV into chunked documents
+- **RAG Chain** – Embeds, stores, and retrieves product insights dynamically
+
+### ☁️ Infrastructure & Deployment
+- **Docker** – Containerization of the entire application
+- **Kubernetes (Minikube)** – Orchestration of services in a local cluster
+- **GCP VM Instance** – Hosting Kubernetes cluster and app in the cloud
+
+### 📊 Monitoring & Observability
+- **Prometheus** – Collects real-time metrics (e.g., request count, latency)
+- **Grafana** – Visualizes metrics via a custom dashboard
+
+### 🔗 Version Control
+- **GitHub** – Source code hosting and CI/CD integration
