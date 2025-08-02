@@ -1,3 +1,14 @@
+<p align="center">
+  <img src="https://img.shields.io/github/license/aimldinesh/NexPick?color=blue" alt="License Badge">
+  <img src="https://img.shields.io/github/stars/aimldinesh/NexPick?style=social" alt="GitHub Stars">
+  <img src="https://img.shields.io/github/forks/aimldinesh/NexPick?style=social" alt="GitHub Forks">
+  <img src="https://img.shields.io/github/issues/aimldinesh/NexPick" alt="GitHub Issues">
+  <img src="https://img.shields.io/github/last-commit/aimldinesh/NexPick" alt="Last Commit Badge">
+  <img src="https://img.shields.io/badge/Made%20with-LangChain-blueviolet" alt="LangChain Badge">
+  <img src="https://img.shields.io/badge/Deployed-GCP-orange" alt="GCP Badge">
+  <img src="https://img.shields.io/badge/Powered%20By-Groq%20LLaMA%203.1--8B-ff69b4" alt="Groq LLM Badge">
+</p>
+
 ## 🤖 NexPick : Your Smart Flipkart Shopping Assistant
 NexPick is a real-time, AI-powered chatbot-based product recommendation system tailored for e-commerce platforms like Flipkart. It leverages the power of LLMs, vector search, and real-time monitoring using Langchain, AstraDB, Prometheus, and Grafana — all orchestrated with Docker, Kubernetes, and GCP VM deployment.
 
