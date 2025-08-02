@@ -262,7 +262,7 @@ Below are some screenshots of the **NexPick** product recommender chatbot in act
 | ![Chat Screen 1](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_1.PNG) | product inquiry & LLM recommends product using RAG |
 | ![Chat Screen 2](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_2.PNG) |product inquiry |
 | ![Chat Screen 3](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_3.PNG) |LLM recommends product using RAG |
-| ![Chat Screen 4](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_4.PNG) | Follow-up user queries |
+| ![Chat Screen 4](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_4.PNG) | User queries about product details |
 | ![Chat Screen 5](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_5.PNG) | Contextual recommendations |
 | ![Chat Screen 6](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_6.PNG) | User queries about product details|
 | ![Chat Screen 7](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_7.PNG) | Deep product reasoning |
