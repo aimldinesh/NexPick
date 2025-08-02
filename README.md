@@ -149,24 +149,26 @@ E2 --> F1
 ---
 ## 🧪 Inputs & Functionality
 ```mermaid
-sequenceDiagram
-    participant User
-    participant Frontend
-    participant Backend
-    participant RAG_Pipeline
-    participant AstraDB
-    participant LLM
-    
-    User->>+Frontend: Enter query (e.g., "Best phone under ₹15k")
-    Frontend->>+Backend: POST /query
-    Backend->>+RAG_Pipeline: Process query
-    RAG_Pipeline->>+AstraDB: Semantic search
-    AstraDB-->>-RAG_Pipeline: Relevant products
-    RAG_Pipeline->>+LLM: Generate response
-    LLM-->>-Backend: Formatted answer
-    Backend-->>-Frontend: Display results
-    Frontend-->>-User: Show recommendations
 
+sequenceDiagram
+    autonumber
+    participant User as 👤 User
+    participant Frontend as 🖥️ Frontend (Flask/JS)
+    participant Backend as 🏗️ Backend (Python)
+    participant RAG as 🧠 RAG Pipeline
+    participant AstraDB as 🗄️ AstraDB
+    participant LLM as 🤖 Groq LLM
+
+    Note over User,LLM: Product Recommendation Flow
+    User->>+Frontend: Enters query<br/>"Best phone under ₹15k"
+    Frontend->>+Backend: POST /api/query<br/>(JSON payload)
+    Backend->>+RAG: Initiate RAG workflow
+    RAG->>+AstraDB: Vector search<br/>(query embeddings)
+    AstraDB-->>-RAG: Top 3 matching products
+    RAG->>+LLM: Generate comparison<br/>(products + query context)
+    LLM-->>-Backend: Structured response:<br/>- Product names<br/>- Prices<br/>- Key specs
+    Backend-->>-Frontend: Formatted HTML response
+    Frontend-->>-User: Displays recommendations<br/>with product images
 ```
 
 ### 👤 User Input
