@@ -294,7 +294,7 @@ python appp.py
 The app will be available at: http://127.0.0.1:5000
 
 ---
-## Docker Run (Optional)
+## ✅ Docker Run (Optional)
 ```bash
 docker build -t nexpick-app .
 docker run -p 5000:5000 nexpick-app
