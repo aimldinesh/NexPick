@@ -259,13 +259,13 @@ Below are some screenshots of the **NexPick** product recommender chatbot in act
 |------------------|-------------|
 | ![App Running](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/0.app_running.PNG) | Flask app running successfully |
 | ![Chat Screen 0](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_0.png) | Welcome message |
-| ![Chat Screen 1](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_1.PNG) | product inquiry |
-| ![Chat Screen 2](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_2.PNG) | LLM recommends product using RAG |
-| ![Chat Screen 3](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_3.PNG) | Follow-up user queries |
-| ![Chat Screen 4](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_4.PNG) | Contextual recommendations |
-| ![Chat Screen 5](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_5.PNG) | User queries about product details |
-| ![Chat Screen 6](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_6.PNG) | Deep product reasoning |
-| ![Chat Screen 7](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_7.PNG) | Additional queries |
+| ![Chat Screen 1](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_1.PNG) | product inquiry & LLM recommends product using RAG |
+| ![Chat Screen 2](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_2.PNG) |product inquiry |
+| ![Chat Screen 3](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_3.PNG) |LLM recommends product using RAG |
+| ![Chat Screen 4](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_4.PNG) | Follow-up user queries |
+| ![Chat Screen 5](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_5.PNG) | Contextual recommendations |
+| ![Chat Screen 6](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_6.PNG) | User queries about product details|
+| ![Chat Screen 7](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_7.PNG) | Deep product reasoning |
 | ![Chat Screen 8](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_8.PNG) | Ongoing chat with consistent memory |
 
 ---
