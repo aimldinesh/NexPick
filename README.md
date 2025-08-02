@@ -278,6 +278,12 @@ docker build -t nexpick-app .
 docker run -p 5000:5000 nexpick-app
 ```
 ---
+## 🛠️ Full CI/CD Deployment Setup Instructions
+
+For detailed, end-to-end deployment steps—including Docker build, Kubernetes deployment on GCP, and Prometheus & Grafana monitoring setup:
+
+👉 [View Full Setup Instructions →](./complete_setup.md)
+
 
 ## 📸 UI Preview
 
