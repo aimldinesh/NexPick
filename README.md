@@ -129,8 +129,8 @@ E2 --> F1
 - Context and query are passed to the **Groq-hosted Llama 3.1-8B model**.
 - Generated response includes:
   - Product **name**, **price**, and **specs**
-  - Product **image**
-  - Hyperlink to original Flipkart page (optional enhancement)
+  - Product **image** (Future enhancement)
+  - Hyperlink to original Flipkart page (Future enhancement)
 
 ### 💬 Chatbot Functionality
 - Built with **Flask + HTML/CSS/JavaScript**
@@ -147,28 +147,19 @@ E2 --> F1
 ---
 ## 🛠️ Tech Stack
 
-### ⚙️ Core Components
-- **🧠 Groq API (LLaMA 3.1 - 8B)** — Fast LLM inference for generating product suggestions
-- **🦜 LangChain** — Manages the Retrieval-Augmented Generation (RAG) pipeline
-- **🌐 Flask** — Backend framework to handle API and chat requests
-- **🛍️ AstraDB (Vector Store)** — Stores product embeddings for semantic retrieval
-
-### 🧰 Frontend
-- **🖼️ HTML/CSS/JavaScript** — Custom-designed UI for the chatbot interface
-
-### 🐳 Containerization & Orchestration
-- **Docker** — Containerizes the application for consistent deployment
-- **Kubernetes (Minikube)** — Manages pods, services, and deployments
-
-### 📈 Monitoring
-- **Prometheus** — Scrapes and collects app metrics (latency, queries)
-- **Grafana** — Visualizes real-time application performance metrics
-
-### ☁️ Cloud Infrastructure
-- **Google Cloud Platform (GCP)** — Hosts the VM and Kubernetes cluster
-
-### 🔄 CI/CD and DevOps
-- **GitHub** — Version control and codebase management
+| Category                            | Technology                      | Description                                                 |
+| ----------------------------------- | ------------------------------- | ----------------------------------------------------------- |
+| ⚙️ Core Components                  | **Groq API (LLaMA 3.1 - 8B)**   | Fast LLM inference for generating product suggestions       |
+|                                     | **LangChain**                   | Handles the Retrieval-Augmented Generation (RAG) pipeline   |
+|                                     | **Flask**                       | Backend framework for API and chatbot interactions          |
+|                                     | **AstraDB (Vector Store)**      | Stores product embeddings for semantic similarity search    |
+| 🧰 Frontend                         | **HTML / CSS / JavaScript**     | Custom-built UI for chatbot interaction                     |
+| 🐳 Containerization & Orchestration | **Docker**                      | Containerizes the entire application                        |
+|                                     | **Kubernetes (Minikube)**       | Manages application services and scaling via pods           |
+| 📈 Monitoring                       | **Prometheus**                  | Scrapes real-time app metrics (like latency, HTTP requests) |
+|                                     | **Grafana**                     | Visualizes metrics and builds real-time dashboards          |
+| ☁️ Cloud Infrastructure             | **Google Cloud Platform (GCP)** | Hosts the Kubernetes cluster and VM environment             |
+| 🔄 CI/CD and DevOps                 | **GitHub**                      | Version control, collaboration, and deployment tracking     |
 
 ---
 
