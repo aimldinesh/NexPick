@@ -12,6 +12,28 @@
 ## 🤖 NexPick : Your Smart Flipkart Shopping Assistant
 NexPick is a real-time, AI-powered chatbot-based product recommendation system tailored for e-commerce platforms like Flipkart. It leverages the power of LLMs, vector search, and real-time monitoring using Langchain, AstraDB, Prometheus, and Grafana — all orchestrated with Docker, Kubernetes, and GCP VM deployment.
 
+---
+
+## 📚 Table of Contents
+
+- [🚀 NexPick: Your Smart Flipkart Shopping Assistant](#-nexpick--your-smart-flipkart-shopping-assistant)
+- [🎯 Features](#-features)
+- [🧱 Project Architecture](#-project-architecture)
+- [✅ Step-by-step: How It Works](#-step-by-step-how-it-works)
+- [🧪 Inputs & Functionality](#-inputs--functionality)
+- [🛠️ Tech Stack](#-tech-stack)
+- [📦 Folder Structure](#-folder-structure)
+- [🚀 How to Run Locally](#-how-to-run-locally)
+- [✅ Docker Run (Optional)](#-docker-run-optional)
+- [🛠️ CI/CD and Deployment Setup Instructions](#-cicd-and-deployment-setup-instructions)
+- [📸 UI Preview](#-ui-preview)
+- [📊 Monitoring Dashboard](#-monitoring-dashboard)
+  - [🔎 Prometheus](#-prometheus)
+  - [📈 Grafana](#-grafana)
+- [🤝 Contributors](#-contributors)
+
+--- 
+
 ## 🎯 Features
 
 NexPick combines intelligent product search with real-time observability and scalable deployment. Key features include:
@@ -272,13 +294,13 @@ python appp.py
 The app will be available at: http://127.0.0.1:5000
 
 ---
-## ✅ Optional: Docker Run
+## Docker Run (Optional)
 ```bash
 docker build -t nexpick-app .
 docker run -p 5000:5000 nexpick-app
 ```
 ---
-## 🛠️ Full CI/CD Deployment Setup Instructions
+## 🛠️ CI/CD and Deployment Setup Instructions
 
 For detailed, end-to-end deployment steps—including Docker build, Kubernetes deployment on GCP, and Prometheus & Grafana monitoring setup:
 
@@ -327,6 +349,9 @@ Real-time metrics visualized using **Prometheus** and **Grafana**:
 | ![Response Size](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/7.Prometheus_http_response_size_bytes.PNG) | Response size metric visualization |
 | ![Scrape Samples](https://github.com/aimldinesh/NexPick/blob/main/screenshots/Grafana/8.Grafana_scrape_samples.PNG) | Scrape samples over time |
 
+These visuals demonstrate the full cycle of product recommendation and robust monitoring in action.
+
 ---
 
-These visuals demonstrate the full cycle of product recommendation and robust monitoring in action.
+## 🤝 Contributors
+- [Dinesh Chaudhary](https://github.com/aimldinesh)
