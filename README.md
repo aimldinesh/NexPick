@@ -115,7 +115,7 @@ E2 --> F1
 
 ---
 ## 🧪 Inputs & Functionality
-```bash
+```mermaid
 sequenceDiagram
     participant User
     participant Frontend
@@ -124,7 +124,7 @@ sequenceDiagram
     participant AstraDB
     participant LLM
     
-    User->>+Frontend: Enter query (e.g., "Best phone under ₹20k")
+    User->>+Frontend: Enter query (e.g., "Best phone under ₹15k")
     Frontend->>+Backend: POST /query
     Backend->>+RAG_Pipeline: Process query
     RAG_Pipeline->>+AstraDB: Semantic search
@@ -133,18 +133,18 @@ sequenceDiagram
     LLM-->>-Backend: Formatted answer
     Backend-->>-Frontend: Display results
     Frontend-->>-User: Show recommendations
+
 ```
---- 
 
 ### 👤 User Input
-- **Natural Language Queries** related to Flipkart products:
+- Enter **Natural Language Queries** related to Flipkart products:
   - Example:  
     - "Suggest a budget smartphone under ₹15,000"  
     - "Which smartwatches are good for fitness tracking?"  
     - "Tell me the best laptops for students"
 
 ### 🧠 Backend Logic
-- Query is passed through the **LangChain RAG pipeline**.
+- Query flows through a **LangChain RAG pipeline**.
 - Relevant product data is **semantically retrieved** from AstraDB using embeddings.
 - Context and query are passed to the **Groq-hosted Llama 3.1-8B model**.
 - Generated response includes:
