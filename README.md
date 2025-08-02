@@ -173,6 +173,7 @@ E2 --> F1
 ---
 
 ## 📦 Folder Structure
+```bash
 ├── .env # Environment variables
 ├── .gitignore # Git ignored files
 ├── app.py # Flask application entry point
@@ -211,7 +212,7 @@ E2 --> F1
 │ └── logger.py # Logging utility
 
 └── venv/ # Virtual environment (excluded in Git)
-
+```
 ---
 
 ## 🚀 How to Run Locally
