@@ -258,7 +258,8 @@ Below are some screenshots of the **NexPick** product recommender chatbot in act
 | 🖼️ Chatbot Screens | Description |
 |------------------|-------------|
 | ![App Running](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/0.app_running.PNG) | Flask app running successfully |
-| ![Chat Screen 1](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_1.PNG) | Welcome message and product inquiry |
+| ![Chat Screen 1](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_0.PNG) | Welcome message |
+| ![Chat Screen 1](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_1.PNG) | product inquiry |
 | ![Chat Screen 2](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_2.PNG) | LLM recommends product using RAG |
 | ![Chat Screen 3](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_3.PNG) | Follow-up user queries |
 | ![Chat Screen 4](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_4.PNG) | Contextual recommendations |
