@@ -266,7 +266,7 @@ Below are some screenshots of the **NexPick** product recommender chatbot in act
 | ![Chat Screen 5](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_5.PNG) | Product details |
 | ![Chat Screen 6](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_6.PNG) | User followup-query|
 | ![Chat Screen 7](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_7.PNG) | Deep product reasoning |
-| ![Chat Screen 8](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_8.PNG) | Ongoing chat with consistent memory |
+| ![Chat Screen 8](https://github.com/aimldinesh/NexPick/blob/main/screenshots/App_images/app_image_8.PNG) | Ongoing chat |
 
 ---
 
