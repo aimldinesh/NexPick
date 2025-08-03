@@ -1,8 +1,13 @@
 <p align="center">
   <img src="https://img.shields.io/github/last-commit/aimldinesh/NexPick" alt="Last Commit Badge">
   <img src="https://img.shields.io/badge/Made%20with-LangChain-blueviolet" alt="LangChain Badge">
-  <img src="https://img.shields.io/badge/Deployed-GCP-orange" alt="GCP Badge">
   <img src="https://img.shields.io/badge/Powered%20By-Groq%20LLaMA%203.1--8B-ff69b4" alt="Groq LLM Badge">
+  <img src="https://img.shields.io/badge/Database-AstraDB-green" alt="AstraDB Badge">
+  <img src="https://img.shields.io/badge/Deployed-GCP-orange" alt="GCP Badge">
+  <img src="https://img.shields.io/badge/Orchestrated-Kubernetes-blue" alt="Kubernetes Badge">
+  <img src="https://img.shields.io/badge/Monitoring-Prometheus-red" alt="Prometheus Badge">
+  <img src="https://img.shields.io/badge/Dashboard-Grafana-orange" alt="Grafana Badge">
+  <img src="https://img.shields.io/badge/Containerized-Docker-blue" alt="Docker Badge">
   <img src="https://img.shields.io/github/stars/aimldinesh/NexPick?style=social" alt="GitHub Stars">
   <img src="https://img.shields.io/github/forks/aimldinesh/NexPick?style=social" alt="GitHub Forks">
   <img src="https://img.shields.io/github/issues/aimldinesh/NexPick" alt="GitHub Issues">
