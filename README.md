@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/Powered%20By-Groq%20LLaMA%203.1--8B-ff69b4" alt="Groq LLM Badge">
 </p>
 
-## 🤖 NexPick : Your Smart Flipkart Shopping Assistant
+## 🤖 NexPick : Your Smart Shopping Assistant
 NexPick is a real-time, AI-powered chatbot-based product recommendation system tailored for e-commerce platforms like Flipkart. It leverages the power of LLMs, vector search, and real-time monitoring using Langchain, AstraDB, Prometheus, and Grafana — all orchestrated with Docker, Kubernetes, and GCP VM deployment.
 
 ---
@@ -356,4 +356,4 @@ These visuals demonstrate the full cycle of product recommendation and robust mo
 ---
 
 ## 🤝 Contributors
-- [Dinesh Chaudhary](https://github.com/aimldinesh)
+- [Dinesh](https://github.com/aimldinesh)
