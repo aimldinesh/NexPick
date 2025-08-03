@@ -8,8 +8,13 @@
   <img src="https://img.shields.io/github/issues/aimldinesh/NexPick" alt="GitHub Issues">
 </p>
 
-## 🤖 NexPick : Your Smart Shopping Assistant
-NexPick is a real-time, AI-powered chatbot-based product recommendation system tailored for e-commerce platforms like Flipkart. It leverages the power of LLMs, vector search, and real-time monitoring using Langchain, AstraDB, Prometheus, and Grafana — all orchestrated with Docker, Kubernetes, and GCP VM deployment.
+<h2 align="center">🤖 NexPick : Your Smart Shopping Assistant</h2>
+
+<p align="center">
+  NexPick is a real-time AI chatbot that recommends Flipkart products using natural language. <br>
+  It combines <strong>LangChain</strong>, <strong>Groq LLaMA 3.1–8B</strong>, and <strong>AstraDB</strong> in a RAG pipeline, <br>
+  with full deployment on <strong>GCP Kubernetes</strong>, monitored via <strong>Prometheus + Grafana</strong>.
+</p>
 
 ---
 
