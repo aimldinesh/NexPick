@@ -25,7 +25,7 @@
 
 ## 📚 Table of Contents
 
-- [🚀 NexPick: Your Smart Flipkart Shopping Assistant](#-nexpick--your-smart-flipkart-shopping-assistant)
+- [🚀 NexPick: Your Smart Shopping Assistant](#-nexpick--your-smart-shopping-assistant)
 - [🎯 Features](#-features)
 - [🧱 Project Architecture](#-project-architecture)
 - [✅ Step-by-step: How It Works](#-step-by-step-how-it-works)
