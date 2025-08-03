@@ -1,5 +1,4 @@
 <p align="center">
-  <img src="https://img.shields.io/github/license/aimldinesh/NexPick?color=blue" alt="License Badge">
   <img src="https://img.shields.io/github/stars/aimldinesh/NexPick?style=social" alt="GitHub Stars">
   <img src="https://img.shields.io/github/forks/aimldinesh/NexPick?style=social" alt="GitHub Forks">
   <img src="https://img.shields.io/github/issues/aimldinesh/NexPick" alt="GitHub Issues">
