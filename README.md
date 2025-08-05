@@ -78,8 +78,8 @@ NexPick combines intelligent product search with real-time observability and sca
 graph TD
 
 subgraph Local Project Setup
-    A1[📦 Project and API Setup] --> A2[⚙️ Configuration Code]
-    A2 --> A3[🔁 Data Converter Code]
+    A1[📦 Project and API Setup] --> A2[⚙️ Configuration ]
+    A2 --> A3[🔁 Data Converter ]
     A3 --> A4[🛢️ Data Ingestion to AstraDB]
     A4 --> A5[🧠 RAG Chain using LangChain]
     A5 --> A6[💬 Flask + HTML/CSS Chatbot UI]
