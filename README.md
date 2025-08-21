@@ -206,7 +206,7 @@ sequenceDiagram
   - Total queries
   - Average response latency
   - Error rates
-- Grafana dashboard displays real-time metrics for system observability
+- Grafana dashboard displays real-time metrics for system observability.
 
 ---
 ## 🛠️ Tech Stack
