@@ -229,8 +229,6 @@ sequenceDiagram
 
 ## 📦 Folder Structure
 ```bash
-├── .env # Environment variables
-├── .gitignore # Git ignored files
 ├── app.py # Flask application entry point
 ├── Dockerfile # Container instructions
 ├── flask-deployment.yaml # Kubernetes deployment file for Flask app
@@ -249,7 +247,6 @@ sequenceDiagram
 │ └── prometheus-deployment.yaml # Prometheus deployment configuration
 
 ├── rag_pipeline/
-│ ├── init.py
 │ ├── config.py # Configuration variables and constants
 │ ├── data_converter.py # Script to clean/convert raw data
 │ ├── data_ingestion.py # Load data into AstraDB vector store
@@ -262,7 +259,6 @@ sequenceDiagram
 │ └── index.html # Chatbot frontend layout (HTML)
 
 ├── utils/
-│ ├── init.py
 │ ├── custom_exception.py # Custom exception handler
 │ └── logger.py # Logging utility
 
