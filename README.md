@@ -136,7 +136,7 @@ E2 --> F1
    - Product images and details are displayed dynamically in response.
 
 5. ### 🐳 Containerization
-   - The full app is containerized using a **Dockerfile**.
+   - The full app(dependency + code )is containerized using a **Dockerfile**.
    - Ensures environment consistency across local and production.
 
 6. ### ☸️ Kubernetes Orchestration
