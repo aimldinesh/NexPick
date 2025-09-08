@@ -152,33 +152,66 @@ GCP --> Grafana
 
 ```
 
-### 👤 User Input
-- Enter **Natural Language Queries** related to Flipkart products:
-  - Example:  
-    - "Suggest a budget smartphone under ₹15,000"  
-    - "Which smartwatches are good for fitness tracking?"  
-    - "Tell me the best laptops for students"
+# ✅ Step-by-Step: How NexPick Works
 
-### 🧠 Backend Logic
-- Query flows through a **LangChain RAG pipeline**.
-- Relevant product data is **semantically retrieved** from AstraDB using embeddings.
-- Context and query are passed to the **Groq-hosted Llama 3.1-8B model**.
-- Generated response includes:
-  - Product **name**, **price**, and **specs**
-  - Product **image** (Future enhancement)
-  - Hyperlink to original Flipkart page (Future enhancement)
+## 1. 👤 User Interaction
+- Users interact with a **chatbot UI** built using **Flask + HTML/CSS/JS**.  
+- They can ask queries in natural language, e.g.,  
+  *“Best phone under ₹15k”*.
 
-### 💬 Chatbot Functionality
-- Built with **Flask + HTML/CSS/JavaScript**
-- Offers a **real-time, dynamic** chat experience
-- Auto-scrolls to new responses and handles conversation context
+---
 
-### 📊 Monitoring Features
-- Prometheus captures:
-  - Total queries
-  - Average response latency
-  - Error rates
-- Grafana dashboard displays real-time metrics for system observability.
+## 2. ⚙️ Backend Request Handling
+- The **Flask backend** receives the query.  
+- It forwards the query to the **LangChain-based RAG pipeline** for intelligent retrieval and response generation.
+
+---
+
+## 3. 🧠 Retrieval-Augmented Generation (RAG)
+- **LangChain** converts the query into embeddings.  
+- **AstraDB (Vector Store)** retrieves the most relevant product documents.  
+- Retrieved context + query → sent to **Groq-hosted LLaMA 3.1–8B model**.  
+- The model generates **ultra-fast, grounded answers**.
+
+---
+
+## 4. 💬 Chatbot Response
+- Backend formats the response with **product names, specs, and recommendations**.  
+- The chatbot UI displays results in a **conversational flow**.
+
+---
+
+## 5. 🐳 Containerization
+- Entire application (**backend + frontend + RAG logic**) is **containerized with Docker**.  
+- Ensures a **consistent runtime environment** across dev, test, and prod.
+
+---
+
+## 6. ☸️ Kubernetes Orchestration & Cloud Deployment
+- **Kubernetes manifests** define how:
+  - Flask app  
+  - Prometheus  
+  - Grafana  
+  run inside the cluster.  
+- Deployed to a **Minikube cluster on a GCP VM**, making it **scalable and cloud-ready**.
+
+---
+
+## 7. 📈 Monitoring & Observability
+- Flask backend exposes **/metrics** endpoint.  
+- **Prometheus** scrapes metrics (request count, latency, error rate).  
+- **Grafana dashboards** provide **real-time system health monitoring**.
+
+---
+
+## 8. 🔄 CI/CD Workflow
+- Source code maintained in **GitHub**.  
+- **GitHub Actions / Jenkins pipelines**:
+  - Build Docker images  
+  - Apply Kubernetes manifests  
+- Enables **repeatable deployments** and **smooth version control**.
+
+---
 
 ---
 ## 🛠️ Tech Stack
