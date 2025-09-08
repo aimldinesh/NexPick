@@ -115,29 +115,41 @@ E2 --> F1
 ```
 ---
 
----
 ## 🧪 Project WorkFlow
 ```mermaid
 
-sequenceDiagram
-    autonumber
-    participant User as 👤 User
-    participant Frontend as 🖥️ Frontend (Flask/JS)
-    participant Backend as 🏗️ Backend (Python)
-    participant RAG as 🧠 RAG Pipeline
-    participant AstraDB as 🗄️ AstraDB
-    participant LLM as 🤖 Groq LLM
+graph TD
 
-    Note over User,LLM: Product Recommendation Flow
-    User->>+Frontend: Enters query<br/>"Best phone under ₹15k"
-    Frontend->>+Backend: POST /api/query<br/>(JSON payload)
-    Backend->>+RAG: Initiate RAG workflow
-    RAG->>+AstraDB: Vector search<br/>(query embeddings)
-    AstraDB-->>-RAG: Top 3 matching products
-    RAG->>+LLM: Generate comparison<br/>(products + query context)
-    LLM-->>-Backend: Structured response:<br/>- Product names<br/>- Prices<br/>- Key specs
-    Backend-->>-Frontend: Formatted HTML response
-    Frontend-->>-User: Displays recommendations<br/>with product images
+%% ================= User Interaction =================
+User[👤 User] --> UI[💬 Chatbot UI Flask + HTML/CSS/JS]
+UI --> Backend[⚙️ Flask Backend]
+
+%% ================= Core App Flow =================
+Backend --> LangChain[🧠 LangChain RAG Pipeline]
+LangChain --> AstraDB[(🛢️ AstraDB Vector DB)]
+LangChain --> LLM[⚡ Groq LLaMA 3.1–8B API]
+
+%% ================= CI/CD Pipeline =================
+Dev[💻 Developer] --> GitHub[🔗 GitHub Repo]
+GitHub --> CI[🚀 CI/CD Pipeline GitHub Actions/Jenkins]
+CI --> Docker[🐳 Docker Build & Push]
+Docker --> K8sDeploy[☸️ Kubernetes Deployment Manifests]
+K8sDeploy --> GCP[🌐 GCP VM + Minikube Cluster]
+
+%% ================= Monitoring =================
+subgraph Monitoring
+    Prometheus[📈 Prometheus Metrics]
+    Grafana[📊 Grafana Dashboards]
+end
+
+Backend -->|/metrics| Prometheus
+Prometheus --> Grafana
+
+%% ================= Cluster Connections =================
+GCP --> Backend
+GCP --> Prometheus
+GCP --> Grafana
+
 ```
 
 ### 👤 User Input
