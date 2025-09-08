@@ -152,32 +152,32 @@ GCP --> Grafana
 
 ```
 
-# ✅ Step-by-Step: How NexPick Works
+## ✅ Step-by-Step: How NexPick Works
 
-## 1. 👤 User Interaction
+### 1. 👤 User Interaction
 - Users interact with a **chatbot UI** built using **Flask + HTML/CSS/JS**.  
 - They can ask queries in natural language, e.g.,  
   *“Best phone under ₹15k”*.
 
-## 2. ⚙️ Backend Request Handling
+### 2. ⚙️ Backend Request Handling
 - The **Flask backend** receives the query.  
 - It forwards the query to the **LangChain-based RAG pipeline** for intelligent retrieval and response generation.
 
-## 3. 🧠 Retrieval-Augmented Generation (RAG)
+### 3. 🧠 Retrieval-Augmented Generation (RAG)
 - **LangChain** converts the query into embeddings.  
 - **AstraDB (Vector Store)** retrieves the most relevant product documents.  
 - Retrieved context + query → sent to **Groq-hosted LLaMA 3.1–8B model**.  
 - The model generates **ultra-fast, grounded answers**.
 
-## 4. 💬 Chatbot Response
+### 4. 💬 Chatbot Response
 - Backend formats the response with **product names, specs, and recommendations**.  
 - The chatbot UI displays results in a **conversational flow**.
 
-## 5. 🐳 Containerization
+### 5. 🐳 Containerization
 - Entire application (**backend + frontend + RAG logic**) is **containerized with Docker**.  
 - Ensures a **consistent runtime environment** across dev, test, and prod.
 
-## 6. ☸️ Kubernetes Orchestration & Cloud Deployment
+### 6. ☸️ Kubernetes Orchestration & Cloud Deployment
 - **Kubernetes manifests** define how:
   - Flask app  
   - Prometheus  
@@ -185,12 +185,12 @@ GCP --> Grafana
   run inside the cluster.  
 - Deployed to a **Minikube cluster on a GCP VM**, making it **scalable and cloud-ready**.
 
-## 7. 📈 Monitoring & Observability
+### 7. 📈 Monitoring & Observability
 - Flask backend exposes **/metrics** endpoint.  
 - **Prometheus** scrapes metrics (request count, latency, error rate).  
 - **Grafana dashboards** provide **real-time system health monitoring**.
 
-## 8. 🔄 CI/CD Workflow[future enhancement]
+### 8. 🔄 CI/CD Workflow
 - Source code maintained in **GitHub**.  
 - **GitHub Actions / Jenkins pipelines**:
   - Build Docker images  
