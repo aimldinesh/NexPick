@@ -114,49 +114,9 @@ D1 --> E2
 E2 --> F1
 ```
 ---
-## ✅ Step-by-step: How It Works
-
-1. ### 📦 Project Initialization & API Setup
-   - Flipkart product data is fetched and converted into a structured format.
-   - LangChain-compatible documents are created for RAG-based retrieval.
-
-2. ### 🛢️ AstraDB Integration
-   - Structured product data is ingested into AstraDB (vector database).
-   - Enables fast and scalable semantic search based on user queries.
-
-3. ### 🧠 RAG Pipeline with LangChain
-   - When a user asks a question, LangChain's Retrieval-Augmented Generation (RAG) system:
-     - Converts the query into embeddings.
-     - Retrieves similar products and context from AstraDB.
-     - Sends retrieved context to the LLM (Groq / Llama-3.1-8B) for answer generation.
-
-4. ### 💬 Smart Chatbot UI
-   - A chatbot frontend built using **Flask + HTML/CSS/JS**.
-   - Provides instant, conversational responses to shopping-related queries.
-   - Product images and details are displayed dynamically in response.
-
-5. ### 🐳 Containerization
-   - The full app(dependency + code )is containerized using a **Dockerfile**.
-   - Ensures environment consistency across local and production.
-
-6. ### ☸️ Kubernetes Orchestration
-   - Kubernetes manifests define deployment of the app, Prometheus, and Grafana.
-   - App is deployed to **Minikube** cluster on a **GCP VM Instance**.
-
-7. ### 📈 Real-Time Monitoring
-   - **Prometheus** collects metrics from the app.
-   - **Grafana** provides a visual dashboard to monitor:
-     - Request counts
-     - Response time
-     - App health and status
-
-8. ### 🔁 Continuous Deployment
-   - Source code hosted on **GitHub**.
-   - All manifests and Dockerfiles version controlled.
-   - Easily reproducible for future scaling or cloud migration.
 
 ---
-## 🧪 Inputs & Functionality
+## 🧪 Project WorkFlow
 ```mermaid
 
 sequenceDiagram
