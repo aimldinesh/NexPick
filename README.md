@@ -213,7 +213,6 @@ GCP --> Grafana
 
 ---
 
----
 ## 🛠️ Tech Stack
 
 | Category                            | Technology                      | Description                                                 |
