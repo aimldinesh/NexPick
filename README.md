@@ -25,7 +25,6 @@
 
 ## 📚 Table of Contents
 
-- [🚀 NexPick: Your Smart Shopping Assistant](#-nexpick--your-smart-shopping-assistant)
 - [🎯 Features](#-features)
 - [🧱 Project Architecture](#-project-architecture)
 - [🧪 Project WorkFlow](#-Project-WorkFlow)
