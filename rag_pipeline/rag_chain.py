@@ -11,9 +11,9 @@ from langchain_core.chat_history import BaseChatMessageHistory
 from rag_pipeline.config import Config
 
 
-# -------------------------------------------
+# ----------------------------------------------
 # 🧠 RAGChainBuilder Class
-# -------------------------------------------
+# ----------------------------------------------
 class RAGChainBuilder:
     """
     Builds a complete Retrieval-Augmented Generation (RAG) pipeline with:
