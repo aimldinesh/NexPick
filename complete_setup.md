@@ -29,7 +29,6 @@
   - Use the **SSH** option provided to connect to the VM from the browser.
 
 
-
 ### 2. Configure VM Instance
 
 - **Clone your GitHub repo**
