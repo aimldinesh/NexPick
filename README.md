@@ -45,7 +45,7 @@
 
 ## 🎯 Features
 
-NexPick combines intelligent product search with real-time observability and scalable deployment. Key features include:
+NexPick combines intelligent product search with real-time observability and scalable deployment. Key features include :
 
 - 🤖 **LLM-Powered Product Recommender**  
   Built using Groq’s **Llama-3.1-8B** model and LangChain’s **RAG** architecture for contextual, human-like shopping assistance.
