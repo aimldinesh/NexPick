@@ -21,7 +21,7 @@ class DataConverter:
         Reads the CSV file and converts each row into a LangChain Document.
 
         Returns:
-            List[Document]: A list of Document objects with review as content and product title as metadata.
+            List[Document]: A list of Document objects with review as content and product title as metadata .
         """
         # Read the CSV file and select only the required columns
         df = pd.read_csv(self.file_path)[["product_title", "review"]]
