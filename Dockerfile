@@ -14,9 +14,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # -----------------------------
 WORKDIR /app
 
-# -----------------------------
+# ------------------------------
 # ✅ Install System Dependencies
-# -----------------------------
+# ------------------------------
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
