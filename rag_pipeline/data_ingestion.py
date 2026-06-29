@@ -13,9 +13,9 @@ from rag_pipeline.config import (
 )  # Configuration settings (API keys, model names, etc.)
 
 
-# -------------------------------------------
+# ----------------------------------------------
 # 📥 Data Ingestor Class
-# -------------------------------------------
+# ----------------------------------------------
 class DataIngestor:
     def __init__(self):
         # Initialize embedding model using HuggingFace endpoint
