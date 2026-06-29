@@ -53,9 +53,9 @@ def create_app():
 
         return reponse
 
-    # ---------------------------------------
+    # ----------------------------------------
     # 📊 Prometheus Metrics Endpoint
-    # ---------------------------------------
+    # ----------------------------------------
     @app.route("/metrics")
     def metrics():
         return Response(generate_latest(), mimetype="text/plain")
